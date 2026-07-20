@@ -6,4 +6,8 @@ for r in range(len(a)):
     if a[r]%2!=0:
         a[l],a[r] = a[r],a[l]
         l += 1
-print(a)
+
+odd = sorted(a[:l])
+even = sorted(a[l:], reverse= True)
+
+print(odd + even)
