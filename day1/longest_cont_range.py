@@ -1,12 +1,20 @@
-a = [1,24,7,4,3,2,9,8]
+a = [1,2,3,6,7,8,9,20,21]
 
 a.sort()
 
-b = []
+current = [a[0]]
+longest = [a[0]]
 
-for i in range(1,len(a)-1):
-    if a[i+1] == a[i]+1:
-        b.append(i)
+for i in range(1,len(a)):
+    if(a[i] == a[i-1]+1):
+        current.append(a[i])
 
-print(b)        
- 
+    else:
+        if(len(current)>len(longest)):
+            longest = current[:]
+        current = [a[i]]
+
+if(len(current)>len(longest)):
+    longest = current[:]
+
+print(longest)                
