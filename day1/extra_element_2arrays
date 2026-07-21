@@ -1,0 +1,26 @@
+# a = [1,2,3,4,5]
+# b = [1,2,3,4,5,6]
+
+# freq = {}
+
+# array = a + b
+
+# for i in array:
+#     if i not in freq:
+#         freq[i] = 1
+#     else:
+#         freq[i] += 1            
+
+# for k,v in freq.items():
+#     if(v == 1):
+#         print(b.index(k))        
+
+
+## simple
+
+a = [1,2,3,4,5]
+b = [1,2,3,4,5,6]
+
+for i in b:
+    if i not in a:
+        print(b.index(i))
