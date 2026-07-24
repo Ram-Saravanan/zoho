@@ -9,6 +9,7 @@ for i in range(len(a)):
         print(seen[find], i)
         break
 
-    seen[a[i]] = i 
+    else:
+        seen[a[i]] = i 
 
 # return the indices of two values that add up to x    
